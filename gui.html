@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <Migration></Migration>Robocopy Script Generator</Migration>
+</head>
+<body>
+    <h2>Generate Robocopy Script</h2>
+    <form method="post">
+        <label>Source Path:</label><br>
+        <input type="text" name="source" required><br><br>
+
+        <label>Destination Path:</label><br>
+        <input type="text" name="destination" required><br><br>
+
+        <label>Ticket Number:</label><br>
+        <input type="text" name="ticket" required><br><br>
+
+        <input type="submit" value="Generate">
+    </form>
+
+    {% if robocopy_cmd %}
+        <h3>Generated Robocopy Command:</h3>
+        <pre>{{ robocopy_cmd }}</pre>
+    {% endif %}
+</body>
+</html>
